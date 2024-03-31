@@ -1,0 +1,17 @@
+body {
+  background: #192428;
+  color: #ffffff;
+}
+
+.todo .todo-item {
+  display: flex;
+  justify-content: space-between;
+  background: #2d383c;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+.todo .todo-item .btn:hover, .todo .todo-item .btn:focus {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=style.css.map */
