@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
 
-  let list = [
+  /*let list = [
   {
     id: 0,
     desc: "Something really nice",
@@ -18,7 +18,7 @@ $(document).ready(() => {
     desc: "Something in between",
     done: false
   }
-  ];
+  ];*/
 
 
   // Get current list of to do items
@@ -47,7 +47,6 @@ $(document).ready(() => {
         $('#todo').append(`<li class="todo-item" data-todo-id="${newItem.id}"><div><button class="todo-check btn btn-link"><i class="far fa-circle"></i></button><span>${newItem.desc}</span></div><button class="todo-remove btn btn-link"><i class="fas fa-trash"></i></button></li>`);
       } else {
         $('#todo').html(`<li class="todo-item" data-todo-id="${newItem.id}"><div><button class="todo-check btn btn-link"><i class="far fa-circle"></i></button><span>${newItem.desc}</span></div><button class="todo-remove btn btn-link"><i class="fas fa-trash"></i></button></li>`);
-
       }
       localStorage.setItem('counter', newItemId);
       return true;
@@ -79,7 +78,6 @@ $(document).ready(() => {
   // Mark item as done
   const markDone = (id) => {
     let current = getCurrentItems();
-
 
     current.find(element => element.key == id).done = (current.find(element => element.key == id).done !== true) ? true : false;
 
@@ -121,7 +119,6 @@ $(document).ready(() => {
 
   // Mark item as done
   $('body').on('click', '.todo-check', function() {
-
     if (markDone($(this).parent().attr('data-todo-id'))) {
       $(this).children('i').toggleClass('fa-circle fa-circle-check');
     } else {
